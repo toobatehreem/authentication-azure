@@ -17,7 +17,8 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 // Serve static files from the 'public' directory (if needed)
-app.use(express.static(__dirname));
+// app.use(express.static(__dirname));
+app.use(express.static(__dirname + '/public'));
 
 // Cosmos DB setup
 const endpoint = process.env.COSMOS_ENDPOINT as string;
